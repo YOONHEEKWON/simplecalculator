@@ -16,20 +16,26 @@ function CalculatorApp() {
   };
 
   const handleSignClick = (sign) => {
+    // ac clear 버튼 조건
     if (sign === "ac") {
       setFirstNumber("");
       setSecondNumber("");
       setCalcSign(null);
     } else if (sign === "=") {
+      // = 계산완료
       if (firstNumber && secondNumber && calcSign) {
         let result;
         if (calcSign === "plus") {
+          //+ 버튼 조건
           result = Number(firstNumber) + Number(secondNumber);
         } else if (calcSign === "minus") {
+          //- 버튼 조건
           result = Number(firstNumber) - Number(secondNumber);
         } else if (calcSign === "multiply") {
+          //* 버튼 조건
           result = Number(firstNumber) * Number(secondNumber);
         } else if (calcSign === "divide") {
+          // 나누기 버튼 조건
           result = Number(firstNumber) / Number(secondNumber);
         }
 
